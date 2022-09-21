@@ -28,7 +28,7 @@ if(formaPagamento == '1' || formaPagamento == '2'){
         alert(`Valor a Pagar: R$ ${precoFinal.toFixed(2)}`)
     } else if (parcelas == '2') {
         alert(`Valor a Pagar: R$ ${precoFinal.toFixed(2)}`)
-    } else (parcelas >= '3') {
+    } else if (parcelas >= '3') {
         const precoFinal = precoProduto * 1.1
         alert(`Valor a Pagar: R$ ${precoFinal.toFixed(2)}`)
     }
