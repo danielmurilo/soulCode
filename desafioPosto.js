@@ -1,6 +1,12 @@
 let litros = parseFloat(prompt('Favor informar a quantidade de litros'))
-let combustivel = prompt('Informe "E" para Etanol ou "G" para Gasolina')
-combustivel = combustivel.toUpperCase() //letra maiuscula
+while(isNaN(litros) || litros <= 0){
+    alert("Favor informar qtd de litros sem letras ou caracteres especiais.")
+    litros = parseFloat(prompt('Favor informar a quantidade de litros'))
+}
+let combustivel = prompt('Informe "E" para Etanol ou "G" para Gasolina').trim().toUpperCase()
+while (combustivel != 'E' && combustivel != 'G'){
+    combustivel = prompt('*Informe "E" para Etanol ou "G" para Gasolina').trim().toUpperCase()
+}
 let precoGasolina = 2.70
 let precoEtanol = 1.90
 

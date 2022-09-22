@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Soma e Média</title>
+</head>
+<body>    
+    <script>
+        const qtd = parseInt(prompt('Informe qtd de números: '))
+        let total = 0.0
+        for (let i = 0; i < qtd; i++) {
+            total = total + parseFloat(prompt('Informe ' + (i+1) + 'º numero:'))
+        }
+        alert('Valor Total = ' + total + ' Média: ' + (total / qtd))
+    </script>
+</body>
+</html>

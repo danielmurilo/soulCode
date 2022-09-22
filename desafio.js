@@ -10,13 +10,19 @@ Código Condição de pagamento
 4 Em três vezes, preço normal de etiqueta mais juros de 10%
  */
 
-const precoProduto = parseFloat(prompt('Qual o preço do produto?'))
+let precoProduto = parseFloat(prompt('Qual o preço do produto?'))
+while (isNaN(precoProduto) || precoProduto <= 0) {
+    precoProduto = parseFloat(prompt('Favor Informar Preço do Produto Apenas com Números.'))
+}
 const mensagem = `
 Qual é a forma de pagamento? Digite:
 1 Dinheiro
 2 Cheque
 3 Cartão`
-const formaPagamento = prompt(mensagem)
+let formaPagamento = prompt(mensagem)
+while (isNaN(formaPagamento) || formaPagamento < 1 || formaPagamento > 3) {
+    formaPagamento = prompt(mensagem)
+}
 
 if(formaPagamento == '1' || formaPagamento == '2'){
     const precoFinal = precoProduto * 0.9
