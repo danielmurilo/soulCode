@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Pares e Impares</title>
+</head>
+<body>
+    <script>
+        /* Faça um programa em Javascript que leia um vetor de seis elementos numéricos inteiros, calcule e mostre:
+        a) A quantidade de números pares
+        b) Quais os números pares
+        c) A quantidade de números ímpares
+        d) Quais os números ímpares */
+
+        let numeros = [],  paresArray = [], imparesArray = []
+        let pares = 0, impares = 0
+        for (let i = 0; i < 6; i++) {
+            numeros [i]= parseInt(prompt('Informe 6 Números Inteiros. ' + (i+1) + 'º: '))
+        }
+        for (let num of numeros) {
+            //checando se número par
+            if(num % 2 == 0){
+                paresArray.push(num)
+                pares++
+            } else { //neste caso são ímpares
+                imparesArray.push(num)
+                impares++
+            }
+        }
+        alert('Encontrados ' + pares + ' números pares: ' + paresArray + ' e ' + impares + ' impares: ' + imparesArray + '.')
+    </script>
+</body>
+</html>

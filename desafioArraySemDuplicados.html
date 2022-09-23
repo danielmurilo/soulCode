@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sem Valores Duplicados</title>
+</head>
+<body>
+    <script>
+        /* 3) Faça um algoritmo para adicionar 20 valores em um array e depois imprima-os no HTML. 
+        Evite que o array possua valores duplicados. */
+        let numeros = [20]
+        for (let i = 0; i < 20; i++) {
+            let num = parseInt(prompt('Digite 20 valores inteiros sem repetí-los. ' + (i+1) + ':'))
+            while (numeros.includes(num)) {
+                num = parseInt(prompt('Número repetido. Digite outro. ' + (i+1) + ':'))
+            }
+            numeros[i] = num
+        }
+        for(let numero of numeros) {
+            document.write(`<p>${numero}</p>`)
+        }
+    </script>
+
+</body>
+</html>

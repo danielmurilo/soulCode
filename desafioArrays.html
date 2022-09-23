@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Arrays</title>
+</head>
+<body>
+    
+    <script>
+        /* Crie um programa que pergunte quantos produtos um cliente pegou,
+        depois peça para que ele informe o preço de cada produto.
+        Ao recuperar possuir o valor de cada produto, faça a soma total da compra e
+        informe o maior e o menor preço que foi informado */
+
+        const qtdProdutos = parseInt(prompt('Informe a Quantidade de Produtos: '))
+        const precosProdutos = []
+        for (let i = 0; i < qtdProdutos; i++) {
+            precosProdutos[i] = parseFloat(prompt('Informe o preço do ' + (i+1) + 'º produto:'))           
+        }
+        let soma = 0, max = 0, min = Number.MAX_VALUE
+        for (let i = 0; i < precosProdutos.length; i++) {
+            soma += precosProdutos[i]
+        }
+        //achando produto mais barato e mais caro
+        for (let preco of precosProdutos) {
+            if (preco < min){
+                min = preco
+            }
+            if(preco > max){
+                max = preco
+            }
+        }
+        alert('Total R$ ' + soma + ' Valor Mais Caro: R$' + max + ' Valor Mais Barato: R$ ' + min)
+    </script>
+</body>S
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Positivos e Negativos</title>
+</head>
+<body>
+    <script>
+        /* Faça um programa em Javascript que leia um vetor com dez números reais, 
+        calcule e mostre a quantidade de números negativos e a soma dos números positivos desse vetor. */
+
+        let vetor10 = [10]
+        let positivos = 0, negativos = 0, somaPositivos = 0, somaNegativos = 0
+        for (let i = 0; i < 10; i++) {
+            vetor10 [i] = parseInt(prompt('Digite 10 numeros reais. ' + (i+1) + 'º: '))
+        }
+        for (let num of vetor10) {
+            //checando se positivo
+            if (num >= 0) {
+                positivos++
+                somaPositivos += num
+            } else { //ou neste caso negativo
+                negativos++
+                somaNegativos += num
+            }
+        }
+        alert('Foram Encontrados ' + positivos + ' nºs positivos. Somados: ' + somaPositivos)
+        alert('Foram Encontrados ' + negativos + ' nºs negativos. Somados: ' + somaNegativos)
+    </script>
+</body>
+</html>
