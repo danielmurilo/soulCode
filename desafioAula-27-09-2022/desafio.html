@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/desafio.css">
+    <title>Desafio 27/09/2022</title>
+</head>
+<body>
+    <main>
+        <section id="section1">
+            <form id="myForm">
+                <div class="divsInputs">
+                    <label for="#inputNomeProduto">Nome:</label><br>
+                    <input id="inputNomeProduto" type="text" name="nome">
+                </div>
+                <div class="divsInputs">
+                    <label for="#inputMarcaProduto">Marca:</label><br>
+                    <input id="inputMarcaProduto" type="text" name="marca">
+                </div>
+                <div class="divsInputs">
+                    <label for="inputImagem">Imagem:</label><br>
+                    <input id="inputImagem" type="text" name="imagem">
+                </div>
+                <div class="divsInputs">
+                    <label for="inputPrecoUnitario">Preço Unitário:</label><br>
+                    <input id="inputPrecoUnitario" type="text" name="precoUnitario">
+                </div>
+                <div class="divsInputs">
+                    <label for="inputQtdEstoque">Quantidade Em Estoque:</label><br>
+                    <input id="inputQtdEstoque" type="text" name="qtdEmEstoque">
+                </div>
+                <div>
+                    <br>
+                    <input type="button" value="Salvar" onclick="salvarProduto(nome)">
+                </div>
+            </form>
+        </section>
+        <section>
+            <table id="tabelaParaPreencherViaJS">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Marca</th>
+                        <th>Imagem</th>
+                        <th>Preço Unitário</th>
+                        <th>Quantidade Em Estoque</th>
+                        <th>Valor Total</th>
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+            </table>
+        </section>        
+    </main>
+    <script src="desafio.js"></script>    
+</body>
+</html>

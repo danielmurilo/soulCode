@@ -1,0 +1,30 @@
+#myForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px 16px;
+    width: 250px;
+    margin: auto;
+}
+
+.divsInputs {
+    padding-bottom: 8px;
+}
+
+#tabelaParaPreencherViaJS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    
+}
+
+tr, td,  th {
+    padding: 10px;
+    align-items: center;
+    border: 1px dimgrey solid;
+}
+img {
+    height: 50px;
+}
