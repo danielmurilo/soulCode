@@ -37,7 +37,7 @@ function salvarProduto(){
     qtdEstoque.innerHTML = produto.qtdEstoque
 
     let total = row.insertCell(5)
-    total.innerHTML = produto.calcularPrecoTotal()
+    total.innerHTML = 'R$ ' + produto.calcularPrecoTotal().toFixed(2)
 
     document.getElementById("myForm").reset()
 }
