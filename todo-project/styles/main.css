@@ -1,0 +1,41 @@
+:root {
+    --azul-SoulCode: #0f637a;
+    --amarelo-SoulCode: #ffd900;
+}
+
+body {
+    background-color: var(--azul-SoulCode);
+}
+
+main {
+    min-height: 100vh;
+}
+
+#header {
+    height: 90px;
+}
+
+#app-logo {
+    width: 220px;
+}
+
+#button-todo-add {
+    font-size: 0;
+    background-color: var(--amarelo-SoulCode);
+}
+
+#todos-list .card {
+    background-color: var(--amarelo-SoulCode);
+}
+
+#todos-list .card + .card{
+    margin-top: 10px;
+}
+
+#todo-text {
+    margin: 0;
+}
+
+.delete-todo {
+    font-size: 0;
+}
