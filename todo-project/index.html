@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="styles/main.css">
     <title>SoulCode ToDo</title>
@@ -15,15 +16,28 @@
     </header>
     <main class="d-flex flex-column">        
         <form action="#" id="todo-form">
-            <div class="m-3 d-flex">
+            <div class="me-3 ms-3 d-flex pb-0">
                 <input id="input-todo" type="text" class="form-control me-2" placeholder="Sua Tarefa Aqui" required>
-                <button id="button-todo-add" type="submit" class="btn btn-warning"><span class="material-symbols-outlined">add</span></button>
+                <button id="button-todo-add" type="submit" class="btn btn-warning"><span class="material-symbols-outlined">add</span></button>                
             </div>
+            <div class="form-check form-check-inline me-3 ms-3 pt-1">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                <label class="form-check-label text-white" for="inlineRadio1">Sem Urgência</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                <label class="form-check-label text-white" for="inlineRadio2">Moderado</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                <label class="form-check-label text-white" for="inlineRadio3">Urgente</label>
+              </div>
         </form>
         <section id="todos-list" class="d-flex flex-column mx-4 my-2 flex-grow-1">
             <!-- <div class="card">
-                <div class="card-body d-flex align-items-center">
+                <div class="card-body d-flex align-items-center ">
                     <p class="todo-text flex-grow-1 text-truncate">Estudar DOM</p>
+                    <i class="material-icons icon-1">circle</i>
                     <button class="btn delete-todo">
                         <span class="material-symbols-outlined">delete</span>
                     </button>

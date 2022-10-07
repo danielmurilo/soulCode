@@ -39,3 +39,30 @@ main {
 .delete-todo {
     font-size: 0;
 }
+
+#inlineRadio1:checked {
+    background-color: gray;
+    /* border-color: #860dfd; */
+}
+
+#inlineRadio2:checked {
+    background-color:rgb(249, 164, 6);
+    /* border-color: #860dfd; */
+}
+
+#inlineRadio3:checked {
+    background-color: red;
+    /* border-color: #860dfd; */
+}
+
+.icon-1 {
+    color: gray;
+}
+
+.icon-2 {
+    color: rgb(249, 164, 6);
+}
+
+.icon-3 {
+    color: red;
+}

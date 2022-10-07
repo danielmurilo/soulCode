@@ -4,7 +4,8 @@ todoForm.addEventListener('submit', function(evento){
     evento.preventDefault() //evita recarregamento da página (F5).
     evento.stopPropagation() //evita a propagação do evento.
     const todoInput = document.querySelector('#input-todo')
-    todos.push(todoInput.value)
+    const radioButtonValue = document.querySelector('.form-check-input:checked').value
+    todos.push(radioButtonValue + todoInput.value)
     todoInput.value = ''
     renderizarTodos()
 })
@@ -21,8 +22,17 @@ function renderizarTodos(){
         
         const p = document.createElement('p')
         p.classList.add('todo-text', 'flex-grow-1', 'text-truncate')
-        p.innerText = tarefa
-
+        const iconBall = document.createElement('i')
+        iconBall.innerText = 'circle'
+        iconBall.classList.add('material-icons')
+        if(tarefa.charAt(0) == 1) {
+            iconBall.classList.add('icon-1')
+        } else if(tarefa.charAt(0) == 2) {
+            iconBall.classList.add('icon-2')
+        } else {
+            iconBall.classList.add('icon-3')
+        }
+        p.innerText = tarefa.substring(1)
         const buttonDelete = document.createElement('button')
         buttonDelete.classList.add('btn', 'delete-todo')
         buttonDelete.addEventListener('click', () => {
@@ -37,7 +47,7 @@ function renderizarTodos(){
 
         //nomeando os filhos...
         buttonDelete.appendChild(spanIcon)
-        divCardBody.append(p, buttonDelete)
+        divCardBody.append(p, iconBall, buttonDelete)
         divCard.appendChild(divCardBody)
         todosListSection.appendChild(divCard)
     }
